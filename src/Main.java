@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 public class Main {
@@ -66,6 +67,9 @@ public class Main {
 
         auta.add(auto1);
 
+        List<String> rodzajSilnikow = auta.stream()
+                .map((Osobowy s) -> s.get().getRodzaj())
+                .collect(Collectors.toList();
 
         for (int j = 0; j < auta.size(); j++)
             System.out.println(auta.get(j).info());
